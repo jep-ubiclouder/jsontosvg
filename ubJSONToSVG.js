@@ -22,12 +22,13 @@ records.push({  'Ddeb':new Date(2017,11, 20, 11, 0, 30, 0),
 
 
 function getBornes(tRecords){
-	var dMin , dMax;
+	var dMin = new Date(1971,0,1);
+	var dMax = new Date(1971,0,1);
 	for(k in tRecords){
 		var r = tRecords[k];
 		console.log(r);
 		if(r.dFin<dMin){ dMin=r.dFin ;}
-		if(dMax<r.ddeb){ dMax=r.dDeb ;}
+		if(dMax<r.dDeb){ dMax=r.dDeb ;}
 		console.log(r.dFin/MILLISECONDSPERHOURS - r.dDeb/MILLISECONDSPERHOURS);
 	}
 	console.log(dMax);
