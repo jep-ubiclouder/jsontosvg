@@ -2,7 +2,7 @@
 
 const MAXWIDTH = 800;
 const MAXHEIGHT =300;
-
+var  MILLISECONDSPERHOURS = 1000*60*600
 var records = [];
 
 // Prototype d'un record
@@ -28,9 +28,9 @@ function getBornes(tRecords){
 		console.log(r);
 		if(r.dFin<dMin){ dMin=r.dFin ;}
 		if(dMax<r.ddeb){ dMax=r.dDeb ;}
-		console.log(r.dFin - r.dDeb);
+		console.log(r.dFin/MILLISECONDSPERHOURS - r.dDeb/MILLISECONDSPERHOURS);
 	}
-	
+	console.log(dMax/MILLISECONDSPERHOURS - dMin/MILLISECONDSPERHOURS);
 }
 
 getBornes(records);
