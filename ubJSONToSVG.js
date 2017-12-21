@@ -14,7 +14,7 @@ records.push({  'dDeb':new Date(2017,11, 24, 11, 0, 30, 0),
 				'tLabel':'LABEL A',
 				'duration':0});
 
-records.push({  'dDeb':new Date(2017,11, 20, 11, 0, 30, 0),
+records.push({  'dDeb':new Date(2017,11, 27, 11, 0, 30, 0),
 				'dFin':new Date(2017,11, 30, 11, 0, 30, 0),
 				'tId':'B',
 				'tLabel':'LABEL B',
