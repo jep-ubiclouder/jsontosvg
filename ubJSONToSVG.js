@@ -2,7 +2,7 @@
 
 const MAXWIDTH = 800;
 const MAXHEIGHT =300;
-var  MILLISECONDSPERHOURS = 1000*60*600
+var  MILLISECONDSPERHOURS = 1000*60*600;
 var records = [];
 
 // Prototype d'un record
