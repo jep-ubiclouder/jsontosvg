@@ -50,6 +50,16 @@ function getBornes(tRecords){
 	return resultat;
 }
 
-var r = getBornes(records);
+var meta = getBornes(records);
 console.log(r);
 console.log(records);
+var PIXELPERHOUR = MAXWIDTH / r.dureeMax;
+var PIXELPERTASK = MAXHEIGHT / records.length;
+
+
+for(k in tRecords){
+	var r = tRecords[k];
+	r.pxOffset = ( meta.dMin/MILLISECONDSPERHOURS - r.dDeb/MILLISECONDSPERHOURS) * PIXELPERHOUR;
+	r.pxWidth = r.duration * PIXELPERHOUR;
+}
+console/log(tRecords);
