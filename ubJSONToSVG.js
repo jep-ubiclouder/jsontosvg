@@ -30,7 +30,8 @@ function getBornes(tRecords){
 		if(dMax<r.ddeb){ dMax=r.dDeb ;}
 		console.log(r.dFin/MILLISECONDSPERHOURS - r.dDeb/MILLISECONDSPERHOURS);
 	}
-	
+	console.log(dMax);
+	console.log(dMin);
 	console.log(dMax/MILLISECONDSPERHOURS - dMin/MILLISECONDSPERHOURS);
 }
 
