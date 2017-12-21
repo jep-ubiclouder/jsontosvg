@@ -63,7 +63,7 @@ var PIXELPERTASK = MAXHEIGHT / records.length;
 
 for(k in records){
 	var r = records[k];
-	r.pxOffset = Math.abs( meta.dMin/MILLISECONDSPERHOURS - r.dDeb/MILLISECONDSPERHOURS) * PIXELPERHOUR;
-	r.pxWidth = r.duration * PIXELPERHOUR;
+	r.pxOffset = Math.floor(Math.abs( meta.dMin/MILLISECONDSPERHOURS - r.dDeb/MILLISECONDSPERHOURS) * PIXELPERHOUR);
+	r.pxWidth = Math.floor(r.duration * PIXELPERHOUR);
 }
 console.log(records);
