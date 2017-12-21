@@ -27,8 +27,8 @@ function getBornes(tRecords){
 	for(k in tRecords){
 		var r = tRecords[k];
 		console.log(r);
-		if(r.dFin<dMin){ dMin=r.dFin ;}
-		if(dMax<r.dDeb){ dMax=r.dDeb ;}
+		if(r.dDeb<dMin){ dMin=r.dDeb ;}
+		if(dMax<r.dFin){ dMax=r.dFin ;}
 		console.log(r.dFin/MILLISECONDSPERHOURS - r.dDeb/MILLISECONDSPERHOURS);
 	}
 	console.log(dMax);
