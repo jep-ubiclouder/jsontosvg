@@ -15,7 +15,7 @@ records.push({  'dDeb':new Date(2017,11, 24, 11, 0, 30, 0),
 				'duration':0});
 
 records.push({  'Ddeb':new Date(2017,11, 20, 11, 0, 30, 0),
-				'Dfin':new Date(2017,11, 31, 11, 0, 30, 0),
+				'Dfin':new Date(2017,11, 30, 11, 0, 30, 0),
 				'tId':'B',
 				'tLabel':'LABEL B',
 				'duration':0});
@@ -30,6 +30,7 @@ function getBornes(tRecords){
 		if(dMax<r.ddeb){ dMax=r.dDeb ;}
 		console.log(r.dFin/MILLISECONDSPERHOURS - r.dDeb/MILLISECONDSPERHOURS);
 	}
+	console.log
 	console.log(dMax/MILLISECONDSPERHOURS - dMin/MILLISECONDSPERHOURS);
 }
 
