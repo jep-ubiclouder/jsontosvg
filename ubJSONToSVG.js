@@ -52,3 +52,4 @@ function getBornes(tRecords){
 
 var r = getBornes(records);
 console.log(r);
+console.log(records);
