@@ -22,7 +22,7 @@ records.push({  'Ddeb':new Date(2017,11, 20, 11, 0, 30, 0),
 
 
 function getBornes(tRecords){
-	var dMin = new Date(1971,0,1);
+	var dMin = new Date(2077,0,1);
 	var dMax = new Date(1971,0,1);
 	for(k in tRecords){
 		var r = tRecords[k];
