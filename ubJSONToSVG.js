@@ -62,4 +62,4 @@ for(k in records){
 	r.pxOffset = ( meta.dMin/MILLISECONDSPERHOURS - r.dDeb/MILLISECONDSPERHOURS) * PIXELPERHOUR;
 	r.pxWidth = r.duration * PIXELPERHOUR;
 }
-console/log(tRecords);
+console.log(records);
