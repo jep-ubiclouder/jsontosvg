@@ -13,7 +13,7 @@ var jsonSVG ={};
 // on fournira une fonctio pour la representatio en string
 
 function getOpenTag(sTag, oAttributes){
-	return "<"+sTag+" "+toString(oAttributes)+">",
+	return "<"+sTag+" "+toString(oAttributes)+">";
 	
 } 
 function getCloseTag(sTag){
