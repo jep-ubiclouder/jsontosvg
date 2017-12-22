@@ -54,7 +54,9 @@ function getBornes(tRecords){
 }
 function parseJson(o){
 	console.log(o);
-	console.log(o.length);
+	for( t in o){
+		console.log(t);
+	}
 	
 }
 
