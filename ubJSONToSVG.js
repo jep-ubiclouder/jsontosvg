@@ -58,7 +58,7 @@ function getBornes(tRecords){
 }
 function parseJson(o){
 	console.log('Objet',o);
-	var resutat = []
+	var resultat = []
 	for( t in o){
 /*		console.log('clef dans o',t);
 		console.log('valeur clef dans o',o[t])
