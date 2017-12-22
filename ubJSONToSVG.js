@@ -54,6 +54,30 @@ function getBornes(tRecords){
 	return resultat;
 }
 
+
+function objectToXml(obj) {
+    var xml = '';
+
+    for (var prop in obj) {
+        if (!obj.hasOwnProperty(prop)) {
+            continue;
+        }
+
+        if (obj[prop] == undefined)
+            continue;
+
+        xml += "<" + prop + ">";
+        if (typeof obj[prop] == "object")
+            xml += objectToXml(new Object(obj[prop]));
+        else
+            xml += obj[prop];
+
+        xml += "<!--" + prop + "-->";
+    }
+
+    return xml;
+}
+
 var meta = getBornes(records);
 console.log(meta);
 console.log(records);
@@ -67,3 +91,5 @@ for(k in records){
 	r.pxWidth = Math.floor(r.duration * PIXELPERHOUR);
 }
 console.log(records);
+var xml =  objectToXml(records[0]);
+console.log(xml);
