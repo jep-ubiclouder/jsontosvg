@@ -76,18 +76,23 @@ function parseJson(o){
 			case Number:
 				element ="<"+t+">"+o[t]+"</"+t+">"
 				console.log(element);
+				break;
 			case String:
 				element ="<"+t+">"+o[t]+"</"+t+">"
 				console.log(element);
+				break;
 			case Date:
 				element ="<"+t+">"+o[t]+"</"+t+">"
 				console.log(element);
+				break;
 			case Array:
 				element ="<"+t+">"+o[t]+"</"+t+">"
 				console.log(element);
+				break;
 			case Object:
 				element ="<"+t+">"+o[t]+"</"+t+">"
 				console.log(element);
+				break;
 		}
 	}
 	
