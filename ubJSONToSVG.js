@@ -14,7 +14,8 @@ records.push({  'dDeb':new Date(2017,11, 24, 11, 0, 30, 0),
 				'tLabel':'LABEL A',
 				'duration':0,
 				'testArray':[0,1],
-				'testHash':{'a':1,'b':2}
+				'testHash':{'a':1,'b':2},
+				'testBool':false
 				 });
 
 records.push({  'dDeb':new Date(2017,11, 27, 11, 0, 30, 0),
