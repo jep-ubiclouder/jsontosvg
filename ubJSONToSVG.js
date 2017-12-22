@@ -56,14 +56,11 @@ function getBornes(tRecords){
 
 
 function json2xml(o) {
-	console.log('json to xml o',len(o) );
-	if (typeof o == 'object' && o.constructor == Object) { //  && len(o) == 1
+	if (typeof o == 'object' && o.constructor == Object && len(o) == 1) {
 		for (var a in o) {
-			console.log('a',a);
 			return toXML(a, o[a]);
 		}
 	} else {
- 
 	}
 	function len(o) {
 		var n = 0;
@@ -102,30 +99,29 @@ function json2xml(o) {
 			}
 			if (typeof o['#text'] !== 'undefined') {
 				if (typeof o['#text'] !== 'object') {
-					doc += o['#text'] + '</' + tag + '>';
-					return doc;
+					doc += o['#text'];
+					delete o['#text'];
 				} else {
 					throw new Error((typeof o['#text'])
 							+ ' being #text is not supported.');
 				}
-			} else {
-				for (var b in o) {
-					if (o[b].constructor == Array) {
-						for (var i = 0; i < o[b].length; i++) {
-							if (typeof o[b][i] !== 'object'
-									|| o[b][i].constructor == Object) {
-								doc += toXML(b, o[b][i]);
-							} else {
-								throw new Error((typeof o[b][i])
-										+ ' is not supported.');
-							}
+			}
+			for (var b in o) {
+				if (o[b].constructor == Array) {
+					for (var i = 0; i < o[b].length; i++) {
+						if (typeof o[b][i] !== 'object'
+								|| o[b][i].constructor == Object) {
+							doc += toXML(b, o[b][i]);
+						} else {
+							throw new Error((typeof o[b][i])
+									+ ' is not supported.');
 						}
-					} else if (o[b].constructor == Object
-							|| typeof o[b] !== 'object') {
-						doc += toXML(b, o[b]);
-					} else {
-						throw new Error((typeof o[b]) + ' is not supported.');
 					}
+				} else if (o[b].constructor == Object
+						|| typeof o[b] !== 'object') {
+					doc += toXML(b, o[b]);
+				} else {
+					throw new Error((typeof o[b]) + ' is not supported.');
 				}
 			}
 			doc += '</' + tag + '>'
