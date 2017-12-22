@@ -72,7 +72,7 @@ function objectToXml(obj) {
         else
             xml += obj[prop];
 
-        xml += "<!--" + prop + "-->";
+        xml += "</" + prop + ">";
     }
 
     return xml;
