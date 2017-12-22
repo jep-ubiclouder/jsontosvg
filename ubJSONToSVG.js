@@ -87,11 +87,11 @@ function parseJson(o){
 				console.log(element);
 				break;
 			case Array:
-				element ="<"+t+">"+parseJson(o[t])+"</"+t+">"
+				element ="<Array>"+parseJson(o[t])+"</Array>"
 				console.log(element);
 				break;
 			case Object:
-				element ="<"+t+">"+parseJson(o[t])+"</"+t+">"
+				element ="<Map>"+parseJson(o[t])+"</Map>"
 				console.log(element);
 				break;
 		}
