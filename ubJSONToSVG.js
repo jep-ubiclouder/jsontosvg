@@ -59,12 +59,33 @@ function getBornes(tRecords){
 function parseJson(o){
 	console.log('Objet',o);
 	for( t in o){
-		console.log('clef dans o',t);
+/*		console.log('clef dans o',t);
 		console.log('valeur clef dans o',o[t])
 		console.log('type of valeur',typeof o[t]);
 		console.log('longueur de valeur',o[t].length);
 		console.log('constructeur de valeur', o[t].constructor);
 		console.log('------------------------');
+*/	
+		switch (o[t].constructor){
+			case Boolean:
+				console.log('bool',t, o[t]);
+				break;
+			case Number:
+				console.log('Number',t, o[t]);
+				break;
+			case String:
+				console.log('String',t, o[t]);
+				break;
+			case Date:
+				console.log('Date',t, o[t]);
+				break;
+			case Array:
+				console.log('Array',t, o[t]);
+				break;
+			case Object:
+				console.log('Objet',t, o[t]);
+				break;
+		}
 	}
 	
 }
