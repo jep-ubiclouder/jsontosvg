@@ -66,25 +66,28 @@ function parseJson(o){
 		console.log('constructeur de valeur', o[t].constructor);
 		console.log('------------------------');
 */	
+		var element = '';
 		switch (o[t].constructor){
 			case Boolean:
-				console.log('bool',t, o[t]);
+				element ="<"+t+">"+o[t]+"</"+t+">"
+				console.log(element);
+				
 				break;
 			case Number:
-				console.log('Number',t, o[t]);
-				break;
+				element ="<"+t+">"+o[t]+"</"+t+">"
+				console.log(element);
 			case String:
-				console.log('String',t, o[t]);
-				break;
+				element ="<"+t+">"+o[t]+"</"+t+">"
+				console.log(element);
 			case Date:
-				console.log('Date',t, o[t]);
-				break;
+				element ="<"+t+">"+o[t]+"</"+t+">"
+				console.log(element);
 			case Array:
-				console.log('Array',t, o[t]);
-				break;
+				element ="<"+t+">"+o[t]+"</"+t+">"
+				console.log(element);
 			case Object:
-				console.log('Objet',t, o[t]);
-				break;
+				element ="<"+t+">"+o[t]+"</"+t+">"
+				console.log(element);
 		}
 	}
 	
