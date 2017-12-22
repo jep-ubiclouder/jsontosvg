@@ -5,9 +5,34 @@ const MAXHEIGHT =300;
 var  MILLISECONDSPERHOURS = 1000*60*60;
 var records = [];
 
-// Prototype d'un record
-// {'dDeb':Date,'dFin':date,'tId':String,'tLabel':String,'duration':integer}
 
+
+var jsonSVG ={};
+// contient des records sur ce modele pour creation du XMl
+// {'tag':String, 'value':data, 'attributes':Object{'attrName':'attrValue'}}
+// on fournira une fonctio pour la representatio en string
+
+function getOpenTag(sTag, oAttributes){
+	return "<"+sTag+" "+toString(oAttributes)+">",
+	
+} 
+function getCloseTag(sTag){
+	return "</"+sTag+">";
+}
+
+function toString(obj){
+	var result = " "
+	for(k in obj){
+		result = result + k +':"'+obj[k]+'" ';
+	}
+	return result;
+}
+
+
+
+
+//Prototype d'un record
+//{'dDeb':Date,'dFin':date,'tId':String,'tLabel':String,'duration':integer}
 records.push({  'dDeb':new Date(2017,11, 24, 11, 0, 30, 0),
 				'dFin':new Date(2017,11, 25, 11, 0, 30, 0),
 				'tId':'A',
@@ -70,20 +95,20 @@ function parseJson(o){
 		var element = '';
 		switch (o[t].constructor){
 			case Boolean:
-				element ="<"+t+">"+o[t]+"</"+t+">"
+				element =getOpenTag(t,null)+o[t]+getCloseTag(t);
 				// console.log(element);
 				
 				break;
 			case Number:
-				element ="<"+t+">"+o[t]+"</"+t+">"
+				element =getOpenTag(t,null)+o[t]+getCloseTag(t);
 				// console.log(element);
 				break;
 			case String:
-				element ="<"+t+">"+o[t]+"</"+t+">"
+				element =getOpenTag(t,null)+o[t]+getCloseTag(t);
 				// console.log(element);
 				break;
 			case Date:
-				element ="<"+t+">"+o[t]+"</"+t+">"
+				element =getOpenTag(t,null)+o[t]+getCloseTag(t);
 				// console.log(element);
 				break;
 			case Array:
