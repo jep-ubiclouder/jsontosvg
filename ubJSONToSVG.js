@@ -56,6 +56,7 @@ function getBornes(tRecords){
 
 
 function json2xml(o) {
+	console.log(o);
 	if (typeof o == 'object' && o.constructor == Object && len(o) == 1) {
 		for (var a in o) {
 			console.log('a',a);
