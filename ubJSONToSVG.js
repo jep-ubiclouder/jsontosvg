@@ -58,6 +58,7 @@ function getBornes(tRecords){
 }
 function parseJson(o){
 	console.log('Objet',o);
+	var resutat = []
 	for( t in o){
 /*		console.log('clef dans o',t);
 		console.log('valeur clef dans o',o[t])
@@ -86,16 +87,17 @@ function parseJson(o){
 				console.log(element);
 				break;
 			case Array:
-				element ="<"+t+">"+o[t]+"</"+t+">"
+				element ="<"+t+">"+parseJson(o[t])+"</"+t+">"
 				console.log(element);
 				break;
 			case Object:
-				element ="<"+t+">"+o[t]+"</"+t+">"
+				element ="<"+t+">"+parseJson(o[t])+"</"+t+">"
 				console.log(element);
 				break;
 		}
+		resultat.push(element);
 	}
-	
+	return resultat;
 }
 
 var meta = getBornes(records);
