@@ -32,7 +32,7 @@ function getBornes(tRecords){
 	var resultat = {};
 	for(k in tRecords){
 		var r = tRecords[k];
-		console.log(r);
+		// console.log(r);
 		if(r.dDeb > r.dFin){ // sanity check
 			var tmp = new Date();
 			tmp = r.dDeb;
