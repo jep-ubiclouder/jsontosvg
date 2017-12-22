@@ -12,7 +12,10 @@ records.push({  'dDeb':new Date(2017,11, 24, 11, 0, 30, 0),
 				'dFin':new Date(2017,11, 25, 11, 0, 30, 0),
 				'tId':'A',
 				'tLabel':'LABEL A',
-				'duration':0});
+				'duration':0,
+				'testArray':[0,1],
+				'testHash':{'a':1,'b':2}
+				 });
 
 records.push({  'dDeb':new Date(2017,11, 27, 11, 0, 30, 0),
 				'dFin':new Date(2017,11, 30, 11, 0, 30, 0),
@@ -73,4 +76,4 @@ for(k in records){
 }
 
 parseJson(records[0]);
-parseJson(records[1]);
+// parseJson(records[1]);
