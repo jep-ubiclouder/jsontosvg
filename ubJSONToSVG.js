@@ -53,9 +53,11 @@ function getBornes(tRecords){
 	return resultat;
 }
 function parseJson(o){
-	console.log(o);
+	console.log('Objet',o);
 	for( t in o){
-		console.log(t);
+		console.log('clef dans o',t);
+		console.log('valeur clef dans o',o[t])
+		console.log('type of valeur',typeof o[t]);
 	}
 	
 }
