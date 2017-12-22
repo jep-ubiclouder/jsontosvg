@@ -142,8 +142,8 @@ function json2xml(o) {
 	}
 };
 var meta = getBornes(records);
-console.log(meta);
-console.log(records);
+//console.log(meta);
+//console.log(records);
 var PIXELPERHOUR = MAXWIDTH / meta.dureeMax;
 var PIXELPERTASK = MAXHEIGHT / records.length;
 
@@ -153,6 +153,6 @@ for(k in records){
 	r.pxOffset = Math.floor(Math.abs( meta.dMin/MILLISECONDSPERHOURS - r.dDeb/MILLISECONDSPERHOURS) * PIXELPERHOUR);
 	r.pxWidth = Math.floor(r.duration * PIXELPERHOUR);
 }
-console.log(records);
+//console.log(records);
 var xml =  json2xml(records[0]);
 console.log(xml);
