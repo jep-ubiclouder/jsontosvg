@@ -63,6 +63,8 @@ function parseJson(o){
 		console.log('valeur clef dans o',o[t])
 		console.log('type of valeur',typeof o[t]);
 		console.log('longueur de valeur',o[t].length);
+		console.log('constructeur de valeur', o[t].constructor);
+		console.log('------------------------');
 	}
 	
 }
