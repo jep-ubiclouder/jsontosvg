@@ -152,5 +152,5 @@ for(k in records){
 	r.pxWidth = Math.floor(r.duration * PIXELPERHOUR);
 }
 console.log(records);
-var xml =  json2xml(JSON.stringify(records[0]));
+var xml =  json2xml(records[0]);
 console.log(xml);
