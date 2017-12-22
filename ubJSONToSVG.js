@@ -136,7 +136,7 @@ function json2xml(o) {
 		s = s.replace('/>/g', '&gt;');
 		return s;
 	}
-};
+}
 var meta = getBornes(records);
 //console.log(meta);
 //console.log(records);
