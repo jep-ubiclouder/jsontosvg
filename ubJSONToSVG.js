@@ -71,33 +71,33 @@ function parseJson(o){
 		switch (o[t].constructor){
 			case Boolean:
 				element ="<"+t+">"+o[t]+"</"+t+">"
-				console.log(element);
+				// console.log(element);
 				
 				break;
 			case Number:
 				element ="<"+t+">"+o[t]+"</"+t+">"
-				console.log(element);
+				// console.log(element);
 				break;
 			case String:
 				element ="<"+t+">"+o[t]+"</"+t+">"
-				console.log(element);
+				// console.log(element);
 				break;
 			case Date:
 				element ="<"+t+">"+o[t]+"</"+t+">"
-				console.log(element);
+				// console.log(element);
 				break;
 			case Array:
 				element ="<Array>"+parseJson(o[t])+"</Array>"
-				console.log(element);
+				// console.log(element);
 				break;
 			case Object:
 				element ="<Map>"+parseJson(o[t])+"</Map>"
-				console.log(element);
+				// console.log(element);
 				break;
 		}
 		resultat.push(element);
 	}
-	return resultat;
+	return resultat.join('\n');
 }
 
 var meta = getBornes(records);
