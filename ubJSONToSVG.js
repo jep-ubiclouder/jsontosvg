@@ -110,5 +110,5 @@ for(k in records){
 	r.pxWidth = Math.floor(r.duration * PIXELPERHOUR);
 }
 
-parseJson(records[0]);
+console.log(parseJson(records[0]));
 // parseJson(records[1]);
